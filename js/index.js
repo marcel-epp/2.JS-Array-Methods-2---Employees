@@ -1,35 +1,37 @@
 import { employees } from "../utils/db.js";
 
 // Exercise 1:
-// This function gets an employees array and a last name. 
-// Try to find an object with the corresponding lastName and return the found object (instead of 'null')
+// This function gets an employees array and a last name.
+// Try to find an object with the corresponding lastName and return the
+// found object (instead of 'null')
 // Check the browser preview and make some tests to see if it works correct now.
 
 function findByLastName(employees, lastName) {
-  return null;
+  return employees.find((employee) => employee.lastName === lastName);
 
   // Exercise 2:
   // The some as above, but now you are searching by the 'id'
 }
 function findById(employees, id) {
-  return null;
+  return employees.find((employee) => employee.id === id);
 }
 
 // Exercise 3:
 // This time you want to find an employee that lives in a city that includes a specific substring.
 
 function findByCitySubString(employees, string) {
-  return null;
+  return employees.find((employee) => employee.city === string);
 }
 
 // Bonus:
-// You want to find any employee, that's profession includes a specific substring 
+// You want to find any employee, that's profession includes a specific substring
 // AND that is older than a specific age
 
 function findByProfessionSubStringAndAge(employees, string, age) {
-  return null;
+  return employees.find(
+    (employee) => employee.profession === string && employee.age <= age
+  );
 }
-
 
 // ------------------------------------------------------------------------------
 // ----- The following code is used for the preview. Don't touch it please. -----
